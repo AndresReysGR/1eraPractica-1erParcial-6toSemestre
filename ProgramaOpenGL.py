@@ -1,6 +1,7 @@
 from OpenGL.GL import *
 from glew_wish import *
 import glfw
+import random
 
 def main():
     if not glfw.init():
@@ -42,7 +43,13 @@ def main():
         #ESABLECER COLOR DE DIBUJO
         glViewport(0,0,800,600)
         #eSTABLECER COLOR DE BORRADO
-        glClearColor(1,0.8,0,1)
+
+        a = random.random() 
+        b = random.random()  
+        c = random.random()  
+        d = random.random()         
+
+        glClearColor(a, b, c, d)
         #BORRAR EL CONTENIDO DE LA VENTANA
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)
 
